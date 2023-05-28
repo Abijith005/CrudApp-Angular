@@ -1,8 +1,8 @@
 .login-row{
-    margin-top: 100px;
+    margin-top: 10px;
 }
 .login-form{
-    height: 40vh;
+    height: 50vh;
     width: 30vw;
 }
 
@@ -10,22 +10,19 @@
     width: 350px;
 }
 .loginButton{
-    background-color: black;
-    color: white;
-}
-
-
+    background-color: white;
+color: black;}
 
 .loginButton:hover{
     transform: scale(1.1) ;
     transition: 0.5s ease-out;
-    background-color: green;
+    background-color: rgb(14, 199, 14);
 }
 
 .registerButton:hover{
     transform: scale(1.1) ;
     transition: 0.5s ease-out;
-    background-color: black;
+    background-color: rgb(7, 168, 231);
     color: ghostwhite;
 }
 .heading{
@@ -34,4 +31,8 @@ font-weight: 900;
 
 .login-form input::placeholder{
     color:grey;
+    opacity: 0.7;
 }
+
+
+  
