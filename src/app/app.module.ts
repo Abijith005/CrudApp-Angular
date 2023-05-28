@@ -6,16 +6,22 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { UserHomebodyComponent } from './components/user-homebody/user-homebody.component';
+import { UserComponent } from './components/user/user.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { UserLoginComponent } from './components/user/user-login/user-login.component';
+import { UserSignUPComponent } from './components/user/user-login/user-sign-up/user-sign-up.component';
+import { UserHomeComponent } from './components/user/user-home/user-home.component';
+import { UserSignInComponent } from './components/user/user-login/user-sign-in/user-sign-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    UserHomebodyComponent,
+    UserComponent,
+    AdminComponent,
+    UserLoginComponent,
+    UserSignUPComponent,
+    UserHomeComponent,
+    UserSignInComponent,
   ],
   imports: [
     BrowserModule,
