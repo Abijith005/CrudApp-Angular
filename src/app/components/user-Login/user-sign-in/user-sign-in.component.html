@@ -8,12 +8,12 @@
                         <div class="mb-3">
                                 <label class="form-label text-white">User Name</label>
                                 <input  class="form-control" type="text" name="userName" id="" placeholder="Eg : Jhon123@gmail.com" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}" [(ngModel)]="userName" required>
-                                <label *ngIf="form.controls['userName']?.invalid&&form.controls['userName'].touched" class="text-danger">Invalid User Name</label>
+                                <label *ngIf="form.controls['userName']?.invalid&&form.controls['userName'].touched" class="text-warning">Invalid User Name</label>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label text-white">Password</label>
-                                <input class="form-control" name="password" type="password" placeholder="Enter Your Password" [(ngModel)]="password" required>
-                                <label *ngIf="form.controls['password']?.invalid&&form.controls['password'].touched" class="text-danger">Invalid Password</label>
+                                <input class="form-control" name="password" type="password" placeholder="Enter Your Password" [(ngModel)]="password" pattern="^[a-zA-Z0-9@$]+$" required>
+                                <label *ngIf="form.controls['password']?.invalid&&form.controls['password'].touched" class="text-warning text-center">Invalid Password</label>
                             </div>
                             <div>
                                 <button type="submit" class="btn  loginButton me-3 mt-4"> Login</button>

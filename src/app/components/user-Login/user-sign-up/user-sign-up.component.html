@@ -8,23 +8,23 @@
                         <div class="mb-3">
                             <label class="form-label text-white">Name</label>
                             <input  class="form-control" type="text" name="name" [(ngModel)]="name" id="" placeholder="Eg : Jhon"  required>
-                            <label *ngIf="form.controls['name']?.invalid&&form.controls['name'].touched" class="text-danger validationError">Invalid Name</label>
+                            <label *ngIf="form.controls['name']?.invalid&&form.controls['name'].touched||!form.controls['name']?.value.trim()&&form.submitted" class="text-warning validationError">Invalid Name</label>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label text-white">Email</label>
                                 <input  class="form-control" type="text" name="email" [(ngModel)]="email" id="" placeholder="Eg : Jhon123@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"required>
-                                <label *ngIf="form.controls['email']?.invalid&&form.controls['email'].touched" class="text-danger validationError">Invalid Email</label>
+                                <label *ngIf="form.controls['email']?.invalid&&form.controls['email'].touched" class="text-warning validationError">Invalid Email</label>
 
                             </div>
                             <div class="mb-3">
                                 <label class="form-label text-white">Password</label>
-                                <input class="form-control" type="password" name="password" [(ngModel)]="password" placeholder="Enter Your Password" required>
-                                <label *ngIf="form.controls['password']?.invalid&&form.controls['password'].touched" class="text-danger validationError">Invalid password</label>
+                                <input class="form-control" type="password" name="password" [(ngModel)]="password" pattern="^[a-zA-Z0-9@$]+$" placeholder="Enter Your Password" required>
+                                <label *ngIf="form.controls['password']?.invalid&&form.controls['password'].touched" class="text-warning validationError">Invalid password</label>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label text-white">Confirm Password</label>
                                 <input class="form-control" type="password" name="confirm-password" [(ngModel)]="confirmPassword" placeholder="Enter Your Password" required>
-                                <label *ngIf="form.controls['confirm-password']?.invalid&&form.controls['confirm-password'].touched||form.controls['password']?.value!==form.controls['confirm-password']?.value&&form.submitted" class="text-danger validationError">Password not Matching</label>
+                                <label *ngIf="form.controls['confirm-password']?.invalid&&form.controls['confirm-password'].touched||form.controls['password']?.value!==form.controls['confirm-password']?.value&&form.submitted" class="text-warning validationError">Password not Matching</label>
                             </div>
                             <div>
                                 <button  type="submit" class="btn  loginButton me-3 mt-4"> Register</button>
