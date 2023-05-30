@@ -1,0 +1,54 @@
+.card{
+    margin-top:50px;
+    height: 300px;
+    width: 550px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+    border-bottom-right-radius: 1.5%;
+    border-top-right-radius: 1.5%;
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+        background-image: url('https://w0.peakpx.com/wallpaper/247/561/HD-wallpaper-macbook-apple-coffee-office-table.jpg'); 
+        background-size: cover;
+}
+        
+
+.image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://w0.peakpx.com/wallpaper/247/561/HD-wallpaper-macbook-apple-coffee-office-table.jpg');
+    background-size: cover;
+    /* background-color: rgb(230, 102, 102); */
+    opacity: 0.4;
+    /* border-radius: inherit;background: linear-gradient(to bottom right, rgba(255, 187, 102, 0.3), rgba(255, 119, 0, 0.4)); */
+}
+
+.text-3d {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.profile-pic{
+    width: 100px;
+    height: 70px;
+    object-fit: contain;
+    margin-top: 20px;
+}
+
+.name{
+    margin: auto;
+    margin-top: 10px;
+    color: white;
+
+}

@@ -12,7 +12,6 @@ import { UserHomeComponent } from './components/user-home/user-home.component';
 import { UserSignInComponent } from './components/user-Login/user-sign-in/user-sign-in.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { FormsModule } from '@angular/forms';
-import { NavBarComponent } from './components/user-home/nav-bar/nav-bar.component';
 import { BodyComponent } from './components/user-home/body/body.component';
 
 
@@ -24,7 +23,6 @@ import { BodyComponent } from './components/user-home/body/body.component';
     UserHomeComponent,
     UserSignInComponent,
     AdminHomeComponent,
-    NavBarComponent,
     BodyComponent,
     
   ],
