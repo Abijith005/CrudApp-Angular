@@ -13,6 +13,7 @@ import { UserSignInComponent } from './components/user-Login/user-sign-in/user-s
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { FormsModule } from '@angular/forms';
 import { BodyComponent } from './components/user-home/body/body.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { BodyComponent } from './components/user-home/body/body.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatIconModule,FormsModule
+    MatIconModule,FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

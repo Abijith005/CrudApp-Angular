@@ -27,9 +27,9 @@
     height: 100%;
     background-image: url('https://w0.peakpx.com/wallpaper/247/561/HD-wallpaper-macbook-apple-coffee-office-table.jpg');
     background-size: cover;
-    /* background-color: rgb(230, 102, 102); */
+    background-color: rgb(230, 102, 102);
     opacity: 0.4;
-    /* border-radius: inherit;background: linear-gradient(to bottom right, rgba(255, 187, 102, 0.3), rgba(255, 119, 0, 0.4)); */
+    border-radius: inherit;background: linear-gradient(to bottom right, rgba(255, 187, 102, 0.3), rgba(255, 119, 0, 0.4));
 }
 
 .text-3d {
