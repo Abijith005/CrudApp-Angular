@@ -1,21 +1,18 @@
 .login-row{
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .login-form{
     height: 50vh;
-    width: 30vw;
+    width: 25vw;
 }
 
 .login-form input{
-    width: 200px;
-    height: 20px;
+    width: 370px;
     background-color: rgb(121, 143, 143);
 }
 .loginButton{
     background-color: white;
 color: black;
-height: 27px;
-font-size: x-small;
 }
 
 .loginButton:hover{
@@ -37,26 +34,15 @@ font-weight: 900;
 .login-form input::placeholder{
     color:whitesmoke;
     opacity: 0.7;
-    font-size: x-small;
 
 }
 
-.formLabel,.validationError{
-    font-size: xx-small;
-}
-
-.registerButton{
-    height: 27px;
-    font-size: x-small;
-}
   
 .card{
     padding: 20px;
     display: flex;
     flex-direction: column;
     padding: 20px;
+height: fit-content;
 }
 
-input[type='text'], input[type='password']{
-    font-size: xx-small;
-}

@@ -32,7 +32,7 @@ export class UserSignUPComponent {
       return 
     }
     
-      this.authService.signUp(form.value).subscribe((token:signUpRes)=>{
+      this.authService.signUp(form.value).subscribe(token=>{
         if (token.access_token) {
           this.userMessage!=token.message
           this.router.navigate(['/home'])

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { UserData } from './interface/user-data';
+import { UserData, signUpRes } from './interface/user-data';
 
 
 @Injectable({
@@ -16,7 +16,12 @@ export class AuthServiceService {
     ) { }
 
     signUp(userDetails:UserData){
-      return this.http.post<{access_token:string}>(`${this.baseUrl}/signUp`,userDetails)
+      return this.http.post<signUpRes>(`${this.baseUrl}/signUp`,userDetails)
 
+    }
+
+    login(userDetails:UserData){
+      
+      return this.http.post<signUpRes>(`${this.baseUrl}/login`,userDetails)
     }
 }
