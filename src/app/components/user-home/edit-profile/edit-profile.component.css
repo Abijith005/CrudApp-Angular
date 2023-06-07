@@ -1,0 +1,17 @@
+input{
+    width: 200px;
+}
+
+.form-label{
+    align-content: start!important;
+}
+
+.card{
+    width: 280px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    
+}

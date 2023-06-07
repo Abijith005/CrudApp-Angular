@@ -1,17 +1,20 @@
 <div class="container">
-
     <div class="row" style=" margin-top: 100px;">
         <div class="col"></div>
         <div class="col">
         <div class="card bg-light d-flex flex-row">
-<div class="profile col-4 bg-dark"><img class="m-1 text-white" src="https://drive.google.com/u/0/uc?id=16U__U5dJdaTfNGobB_OpwAJ73vM50rPV&export=download" alt="img"/>
-<div class="d-flex justify-content-center" >
-    <img class="profile-pic" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=826&t=st=1680295524~exp=1680296124~hmac=02e23136e23578ef52071ce6ce8be6ecd2a32c6bef946fcacd4e6e788ed33360%27`" alt="">
-</div>
-<div class="details d-flex flex-column">
-    <p class="name" >name</p>
-    <p class="name">email</p>
-</div>
+<div class="profile col-4" style="background-color: wheat;">
+    <img (click)="editProfile()" class="m-3 text-white" src="https://drive.google.com/u/0/uc?id=16U__U5dJdaTfNGobB_OpwAJ73vM50rPV&export=download" alt="img"/>
+    <div *ngIf="!profileEdit">
+        <div  class="d-flex justify-content-center" >
+            <img class="profile-pic" src="http://localhost:3000/images/{{userDetails?.profilePic?.filename}}">
+        </div>
+        <div  class="details d-flex flex-column">
+            <p class="name font-monospace">Email:{{userDetails?.email}}</p>
+            <p class="name font-monospace">Name:{{userDetails?.name}}</p>
+        </div>
+    </div>
+<app-edit-profile *ngIf="profileEdit"></app-edit-profile>
 </div>
 <div class="image col-8 text-center">
 <h1 class="text-3d" style="color: blanchedalmond;">WELCOME HOME</h1>

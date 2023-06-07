@@ -1,0 +1,13 @@
+<nav class="nav align-items-center">
+    <div class="navbar  container">
+        <div class="container-fluid ">
+            <form class="form" role="search">
+                <input (keyup)="searchUsers()" class="form-control me-2" name="searchInput" type="search" [(ngModel)]="input" placeholder="Search" aria-label="Search">
+            </form>
+            <div>
+                <button  class="btn btn-outline-success" routerLink="create-user" type="submit">Create</button>
+                <button (click)="adminlogOut()" class="btn btn-danger mx-3">LogOut</button>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,20 @@
+<div class="container card shadow mt-5">
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col" class="tableItems">Sl No.</th>
+          <th scope="col"class="tableItems">Name</th>
+          <th scope="col" class="tableItems">Email</th>
+          <th scope="col" class="tableItems">Options</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of usersData?.users; let i=index" >
+        <tr>
+          <th class="tableItems" scope="row" class="text-center">{{i+1}}</th>
+          <td class="tableItems">{{item.name}}</td>
+          <td class="tableItems">{{item.email}}</td>
+          <td class="tableItems"><button (click)="editUser(item._id!)" class="btn btn-dark mx-1">Edit</button> <button (click)="deleteUser(item._id!)" class="btn btn-danger">Delete</button></td>
+        </tr>
+
+      </tbody>  </table>
+    </div>

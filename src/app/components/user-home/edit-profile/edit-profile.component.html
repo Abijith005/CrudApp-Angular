@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card shadow bg-light">
+        <!-- <form action="" #form="ngForm" (ngSubmit)="saveEdit(form)"  class="d-flex flex-column justify-content-center align-items-center"  enctype="multipart/form-data">
+            <div style="width:200px ;" class="align-items-start">
+                <label class="form-label text-dark font-monospace fw-bold mt-4 mb-2">Edit Name</label>
+                <input class="form-control mb-4" [(ngModel)]="name" type="text" name="name" id="" >
+                <label class="form-label font-monospace text-dark fw-bold mb-2">Change Profile-pic</label>
+            <input class="mb-3" type="file" [(ngModel)]="profilePic" name="profilePic" id="">
+            </div>
+            <button type="submit" class="btn btn-success my-3">Save</button>
+        </form> -->
+        <form #form="ngForm" (ngSubmit)="saveEdit(form)" class="d-flex flex-column justify-content-center align-items-center" enctype="multipart/form-data">
+            <div style="width: 200px;" class="align-items-start">
+              <label class="form-label text-dark font-monospace fw-bold mt-4 mb-2">Edit Name</label>
+              <input class="form-control mb-4" [(ngModel)]="name" type="text" name="name">
+              <label class="form-label font-monospace text-dark fw-bold mb-2">Change Profile-pic</label>
+              <input class="mb-3" type="file" (change)="handleFileInput($event)" name="profilePic">
+            </div>
+            <button type="submit" class="btn btn-success my-3">Save</button>
+          </form>
+          
+    </div>
+
+</div>
+

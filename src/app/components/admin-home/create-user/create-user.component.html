@@ -1,0 +1,36 @@
+
+<div class="container-fluid " style="height: 100vh; background-color: rgba(8, 23, 48, 0.3);">
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <h2 class="text-center heading mt-5">Create User</h2>
+                <div class="card shadow bg-white " >
+                    <form action="" #form="ngForm" class="login-form d-flex flex-column align-items-center" (ngSubmit)="onSubmit(form)">
+                        <div class="mb-3">
+                            <label class="form-label text-white">Name</label>
+                            <input  class="form-control" type="text" name="name" [(ngModel)]="name" id="" placeholder="Eg : Jhon"  required>
+                            <label *ngIf="form.controls['name']?.invalid&&form.controls['name'].touched||!form.controls['name']?.value.trim()&&form.submitted" class="text-danger mt-1">Invalid Name</label>
+                        </div>
+                        <div class="mb-3">
+                                <label class="form-label text-white">Email</label>
+                                <input  class="form-control" type="text" name="email" [(ngModel)]="email" id="" placeholder="Eg : Jhon123@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"required>
+                                <label *ngIf="form.controls['email']?.invalid&&form.controls['email'].touched||!form.controls['email']?.value.trim()&&form.submitted" class="text-danger mt-1">Invalid Email</label>
+
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white">Password</label>
+                                <input class="form-control" type="password" name="password" [(ngModel)]="password" pattern="^[a-zA-Z0-9@$]+$" placeholder="Enter Your Password" required>
+                                <label *ngIf="form.controls['password']?.invalid&&form.controls['password'].touched||!form.controls['password']?.value.trim()&&form.submitted" class="text-danger mt-1">Invalid password</label>
+                            </div>
+                            <div>
+                                <button  type="submit" class="btn  loginButton me-3 mt-3"> Submit</button>
+                            </div>
+                        </form>
+                </div>
+
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>

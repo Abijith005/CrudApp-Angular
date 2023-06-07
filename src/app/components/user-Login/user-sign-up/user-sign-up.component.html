@@ -2,8 +2,8 @@
     <div class="col"></div>
     <div class="row login-row" style="height:450px;" >
             <div class="col">
-                <div class="card shadow bg-dark ">
-                    <h1 class="text-center text-white mt-4 mb-4 heading font-monospace"> User Register Here </h1> 
+                <div class="card shadow bg-dark " (click)="clearMessage()">
+                    <h1 class="text-center  mt-4 mb-4 heading font-monospace" [ngStyle]="{color:authMessage?'red':'white'}"> {{authMessage||"User Register Here"}} </h1> 
                     <form action="" #form="ngForm" class="login-form d-flex flex-column align-items-center" (ngSubmit)="onSubmit(form)">
                         <div class="mb-3">
                             <label class="form-label text-white">Name</label>
